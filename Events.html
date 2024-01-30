@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/Fanzonley/Fav Icon.png" />
+    <title>FanZonely</title>
+    <!--     Fonts and icons     -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"
+    />
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/42d5adcbca.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="./assets/css/material-dashboard.css?v=3.0.5"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
+    <style>
+        .bg-grey {
+          background-color: #8B8EB7!important;
+          border-radius: 10px;
+          padding: 5px;
+    
+        }
+      </style>
+  </head>
+
+  <body class="g-sidenav-show  " style="background-color: #ffffff">
+    <aside
+      class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 z-index-2"
+      id="sidenav-main"
+      style="background-color: #161d6f"
+    >
+      <div class="sidenav-header">
+        <i
+          class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+          aria-hidden="true"
+          id="iconSidenav"
+        ></i>
+        <a class="navbar-brand m-0" href="#" target="_blank">
+          <img
+            src="./assets/Fanzonley/Logo 1 - Blue.png"
+            class="navbar-brand-img mt-3"
+            alt="main_logo"
+          />
+        </a>
+      </div>
+      <hr class="horizontal light mt-5" />
+      <div
+        class="collapse navbar-collapse w-auto h-auto"
+        id="sidenav-collapse-main"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item mb-2 mt-0">
+            <a
+             
+              href="#ProfileNav"
+              class="nav-link text-white"
+              aria-controls="ProfileNav"
+              role="button"
+              aria-expanded="false"
+            >
+              <img src="./assets/img/team-3.jpg" class="avatar" />
+              <span class="nav-link-text ms-2 ps-1">Brooklyn Alice</span>
+            </a>
+          </li>
+          <hr class="horizontal light mt-0" />
+          <li class="">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/dashboard.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Dashboard </span>
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="Events.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/Events.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1">Events </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Users.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/profile.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Users </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Payments.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/payments.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Payments </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Setting.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/Settings.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Settings </span>
+                </a>
+              </li>
+              <hr class="horizontal light " />
+              <li class="nav-item  " style="margin-top: 140%;">
+                <a class="nav-link text-white" href="login.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/logout.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
+    >
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
+        id="navbarBlur"
+        data-scroll="true"
+      >
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol
+              class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5"
+            >
+              <li class="breadcrumb-item text-sm">
+                <a class="opacity-7 text-dark" href="javascript:;">
+                  <p><img src="./assets/Fanzonley/Events-gray.png" /></p>
+                </a>
+              </li>
+              <!-- <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li> -->
+              <li
+                class=" mx-3 text-sm text-dark mt-1 active"
+                aria-current="page"
+              >
+                Events
+              </li>
+            </ol>
+            <!-- <h6 class="font-weight-bolder mb-0">Dashboard</h6> -->
+          </nav>
+          <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none">
+            <a href="javascript:;" class="nav-link text-body p-0">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </div>
+          <div
+            class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
+            id="navbar"
+          >
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center"></div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header pb-0">
+                <div style="display: flex; justify-content: space-between;">
+                  <h5>Event</h5> 
+                  <div class="col-lg-2">
+          
+                      <select
+                        class="form-control bg-white"
+                        name="choices-type"
+                        id="choices-type"
+                      >
+                        <option value="type1" selected="">All</option>
+                       <option value="type 2">FIFA</option>
+                     
+                      </select>
+                    
+                </div>
+              </div> 
+              <div class="card-body px-0 pb-0">
+                <div class="table-responsive">
+                  <table class="table table-flush" id="datatable-basic">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Event</th>
+                        <th>Venue</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Total Predictions</th>
+                        <th>Correct Predictions</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-sm"><a href="EventsDetail.html"  style=" color: #5072d1;
+                            text-decoration: underline;
+                            opacity: 0.86;">Barca VS Madrid</a></td>
+                        <td class="text-sm">Location</td>
+                        <td class="text-sm">FIFA</td>
+                        <td class="text-sm">10-Oct-2023</td>
+                        <td>
+                          <span class="badge badge-success text-lowercase p-2">completed</span>
+                        </td>
+                    
+                        <td class="text-sm">455</td>
+                        <td class="text-sm">200</td>
+
+                        <td class="text-sm">
+                          <img src="./assets/Fanzonley/Reward.png"  data-bs-toggle="modal" data-bs-target="#requestModal"/>
+                          <img src="./assets/Fanzonley/Send.png" data-bs-toggle="modal" data-bs-target="#send"/>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm"><a href="EventsDetail.html"  style=" color: #5072d1;
+                            text-decoration: underline;
+                            opacity: 0.86;">Barca VS Madrid</a></td>
+                        <td class="text-sm">Location</td>
+                        <td class="text-sm">FIFA</td>
+                       
+                        <td class="text-sm">10-Oct-2023</td>
+                        <td>
+                            <span class="badge badge-info text-lowercase p-2">On Going</span>
+                          </td>
+                        <td class="text-sm">443</td>
+                        <td class="text-sm">340</td>
+
+                        <td class="text-sm">
+                          <img src="./assets/Fanzonley/Reward.png"   data-bs-toggle="modal" data-bs-target="#requestModal"/>
+                          <img src="./assets/Fanzonley/Send.png" data-bs-toggle="modal" data-bs-target="#send" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm"><a href="EventsDetail.html"  style=" color: #5072d1;
+                            text-decoration: underline;
+                            opacity: 0.86;">Barca VS Madrid</a></td>
+                        <td class="text-sm">Location</td>
+                        <td class="text-sm">FIFA</td>
+                       
+                        <td class="text-sm">10-Oct-2023</td>
+                        <td>
+                            <span class="badge badge-success text-lowercase p-2">completed</span>
+                          </td>
+                        <td class="text-sm">443</td>
+                        <td class="text-sm">340</td>
+
+                        <td class="text-sm">
+                          <img src="./assets/Fanzonley/Reward.png"   data-bs-toggle="modal" data-bs-target="#requestModal"/>
+                          <img src="./assets/Fanzonley/Send.png" data-bs-toggle="modal" data-bs-target="#send" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-sm"><a href="EventsDetail.html"  style=" color: #5072d1;
+                            text-decoration: underline;
+                            opacity: 0.86;">Barca VS Madrid</a></td>
+                        <td class="text-sm">Location</td>
+                        <td class="text-sm">FIFA</td>
+                       
+                        <td class="text-sm">10-Oct-2023</td>
+                        <td>
+                            <span class="badge badge-info text-lowercase p-2">On Going</span>
+                          </td>
+                        <td class="text-sm">443</td>
+                        <td class="text-sm">340</td>
+
+                        <td class="text-sm">
+                          <img src="./assets/Fanzonley/Reward.png"   data-bs-toggle="modal" data-bs-target="#requestModal"/>
+                          <img src="./assets/Fanzonley/Send.png" data-bs-toggle="modal" data-bs-target="#send" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+         
+      </div>
+<!-- modal -->
+<div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg " role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reward</h5>
+        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+      <div class="modal-body">
+        <div class="row">
+                   
+          <div x-data="{ isActive: false }" @click="isActive = !isActive"   :class="{ 'bg-grey': isActive, 'text-white': isActive }"
+            class="d-flex mt-3 cursor-pointer border-radius-lg bg-grey px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="./assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 text-justify mx-2 my-auto"><bold class="font-weight-bold " >T-Shirt</bold> </p>
+          </div>
+
+
+          <div x-data="{ isActive: false }" @click="isActive = !isActive"   :class="{ 'bg-grey': isActive, 'text-white': isActive }"
+            class="d-flex mt-3 cursor-pointer border-radius-lg px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="../assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 text-justify mx-2 my-auto "><bold class="font-weight-bold " >Football</bold></p>
+          </div>
+          <div x-data="{ isActive: false }" @click="isActive = !isActive"   :class="{ 'bg-grey': isActive, 'text-white': isActive }"
+            class="d-flex mt-3 cursor-pointer  border-radius-lg px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="../assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 mx-2 my-auto "><bold class="font-weight-bold " >$100</bold> </p>
+          </div>
+        
+         
+
+        </div>
+    
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-sl  mb-3 mt-sm-0 py-2 ">Confirm</button>
+  </div>
+  </div>
+</div>
+</div>
+<div class="modal fade" id="send" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send Notifications To Winners</h5>
+        <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+      <div class="modal-body">
+        <div class="row">
+                   
+          <div x-data="{ isActive: false }" @click="isActive = !isActive" :class="{ 'bg-grey': isActive }" :class="{'text-white':isActive    }"
+            class="d-flex mt-3 cursor-pointer border-radius-lg bg-grey px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="./assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 text-justify mx-2 my-auto"><bold class="font-weight-bold " style="color: #4549D4;">Congratulations!</bold> You've won our football prediction event! Please stay behind the stage after the game for your reward</p>
+          </div>
+
+
+          <div x-data="{ isActive: false }" @click="isActive = !isActive" :class="{ 'bg-grey': isActive }"
+            class="d-flex mt-3 cursor-pointer border-radius-lg px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="../assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 text-justify mx-2 my-auto "><bold class="font-weight-bold " style="color: #4549D4;">You're the winner!</bold> </p>
+          </div>
+          <div x-data="{ isActive: false }" @click="isActive = !isActive" :class="{ 'bg-grey': isActive }"
+            class="d-flex mt-3 cursor-pointer  border-radius-lg px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="../assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 mx-2 my-auto "><bold class="font-weight-bold " style="color: #4549D4;">You're the winner!</bold> Stay there after the game to claim your prize.</p>
+          </div>
+        
+          <div x-data="{ isActive: false }" @click="isActive = !isActive" :class="{ 'bg-grey': isActive }"
+            class="d-flex mt-3 cursor-pointer  border-radius-lg px-3 py-4" style="border: 1px solid #8B8EB7;">
+            <img alt="Image" src="../assets/Fanzonley/Notifications- blue.png" class="avatar shadow">
+            <p class="text-dark opacity-9 mx-2 text-justify my-auto "><bold class="font-weight-bold " style="color: #4549D4;">Congratulations!</bold> You've won our football prediction event! Please stay behind the stage after the game for your reward</p>
+          </div>
+         
+
+        </div>
+    
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary btn-sl  mb-3 mt-sm-0 py-2 ">Send </button>
+  </div>
+  </div>
+</div>
+</div>
+</main>
+
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <!-- Kanban scripts -->
+    <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+    <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <script src="./assets/js/plugins/world.js"></script>
+    <script src="./assets/js/plugins/datatables.js"></script>
+    <script src="./assets/js/plugins/choices.min.js"></script>
+
+    <script>
+          if (document.getElementById("choices-type")) {
+        var element = document.getElementById("choices-type");
+        const example = new Choices(element, {
+          searchEnabled: false,
+        });
+      }
+      const dataTableBasic = new simpleDatatables.DataTable(
+        "#datatable-basic",
+        {
+          searchable: true,
+          fixedHeight: true,
+        }
+      );
+      var win = navigator.platform.indexOf("Win") > -1;
+      if (win && document.querySelector("#sidenav-scrollbar")) {
+        var options = {
+          damping: "0.5",
+        };
+        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+      }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="../../assets/js/material-dashboard.min.js?v=3.0.5"></script>
+  </body>
+</html>

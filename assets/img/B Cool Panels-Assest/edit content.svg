@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67.184" height="67.184" viewBox="0 0 67.184 67.184">
+  <defs>
+    <filter id="Rectangle_942" x="0" y="0" width="67.184" height="67.184" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="edit_content" data-name="edit content" transform="translate(-1467.316 -483)">
+    <g transform="matrix(1, 0, 0, 1, 1467.32, 483)" filter="url(#Rectangle_942)">
+      <rect id="Rectangle_942-2" data-name="Rectangle 942" width="49.184" height="49.184" rx="24.592" transform="translate(9 6)" fill="#cedbe2"/>
+    </g>
+    <g id="edit-3-svgrepo-com_1_" data-name="edit-3-svgrepo-com (1)" transform="translate(1490 505.548)">
+      <path id="Path_16612" data-name="Path 16612" d="M21.28,6.4l-9.54,9.54c-.95.95-3.77,1.39-4.4.76s-.2-3.45.75-4.4l9.55-9.55A2.58,2.58,0,1,1,21.28,6.4Z" transform="translate(-2 -1.913)" fill="none" stroke="#0e4a6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <path id="Path_16613" data-name="Path 16613" d="M11,4H6A4,4,0,0,0,2,8V18a4,4,0,0,0,4,4H17c2.21,0,3-1.8,3-4V13" transform="translate(-2 -1.913)" fill="none" stroke="#0e4a6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

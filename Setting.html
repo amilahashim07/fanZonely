@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../../assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/Fanzonley/Fav Icon.png" />
+    <title>FanZonely</title>
+    <!--     Fonts and icons     -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"
+    />
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/42d5adcbca.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="./assets/css/material-dashboard.css?v=3.0.5"
+      rel="stylesheet"
+    />
+    <style>
+      #v-pills-tabContent .nav.nav-pills .nav-link.active i {
+        animation: 0.2s ease;
+        background-color: #e6ecf0;
+        border-radius: 16px;
+        color: #0a3550 !important;
+      }
+
+      #v-pills-tabContent .nav.nav-pills .nav-link.active span {
+        animation: 0.2s ease;
+        background-color: #e6ecf0;
+        border-radius: 16px;
+        color: #0a3550 !important;
+      }
+
+      .nav.nav-pills .nav-link.active {
+        animation: 0.2s ease;
+        background-color: #e6ecf0;
+        color: #0a3550 !important;
+        border-radius: 10px;
+      }
+
+      .dataTable-container {
+        height: 200px !important;
+      }
+    </style>
+  </head>
+
+  <body class="g-sidenav-show" style="background-color: #ffffff">
+    <aside
+      class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 z-index-2"
+      id="sidenav-main"
+      style="background-color: #161d6f"
+    >
+      <div class="sidenav-header">
+        <i
+          class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none"
+          aria-hidden="true"
+          id="iconSidenav"
+        ></i>
+        <a class="navbar-brand m-0" href="#" target="_blank">
+          <img
+            src="./assets/Fanzonley/Logo 1 - Blue.png"
+            class="navbar-brand-img mt-3"
+            alt="main_logo"
+          />
+        </a>
+      </div>
+      <hr class="horizontal light mt-0 mt-5" />
+      <div
+        class="collapse navbar-collapse w-auto h-auto"
+        id="sidenav-collapse-main"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item mb-2 mt-0">
+            <a
+            
+              href="#ProfileNav"
+              class="nav-link text-white"
+              aria-controls="ProfileNav"
+              role="button"
+              aria-expanded="false"
+            >
+              <img src="./assets/img/team-3.jpg" class="avatar" />
+              <span class="nav-link-text ms-2 ps-1">Brooklyn Alice</span>
+            </a>
+          </li>
+          <hr class="horizontal light mt-0" />
+          <li class="">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/dashboard.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Dashboard </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Events.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/Events.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1">Events </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Users.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/profile.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Users </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="Payments.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/payments.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Payments </span>
+                </a>
+              </li>
+
+              <li class="nav-item active">
+                <a class="nav-link text-white active" href="Setting.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/Settings.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Settings </span>
+                </a>
+              </li>
+              <hr class="horizontal light " />
+              <li class="nav-item  " style="margin-top: 140%;">
+                <a class="nav-link text-white" href="login.html">
+                  <span class="sidenav-mini-icon"
+                    ><img src="./assets/Fanzonley/logout.png"
+                  /></span>
+                  <span class="sidenav-normal ms-2 ps-1"> Logout </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
+    >
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
+        id="navbarBlur"
+        data-scroll="true"
+      >
+        <div class="container-fluid py-1 px-3">
+          <nav aria-label="breadcrumb">
+            <ol
+              class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5"
+            >
+              <li class="breadcrumb-item text-sm">
+                <a class="opacity-7 text-dark" href="javascript:;">
+                  <p><img src="./assets/Fanzonley/Settings-Gray.png" /></p>
+                </a>
+              </li>
+              <!-- <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Pages</a></li> -->
+              <li
+                class=" mx-3 text-sm text-dark mt-1 active"
+                aria-current="page"
+              >
+                Settings
+              </li>
+            </ol>
+            <!-- <h6 class="font-weight-bolder mb-0">Dashboard</h6> -->
+          </nav>
+          <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none">
+            <a href="javascript:;" class="nav-link text-body p-0">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </div>
+          <div
+            class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4"
+            id="navbar"
+          >
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center"></div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        <div class="col-12">
+          <div class="p-0 position-relative mx-5 z-index-2">
+            <div
+              class="tab-content card-background-white"
+              id="v-pills-tabContent"
+            >
+              <div
+                class="tab-pane fade show position-relative active"
+                id="cam1"
+                role="tabpanel"
+                aria-labelledby="cam1"
+                loading="lazy"
+              >
+                <div class="row">
+                  <div class="col-md-3 mx-0 px-0">
+                    <div
+                      class="nav card flex-column nav-pills bg-white me-3 py-3 my-0"
+                      id="v-pills-tab"
+                      role="tablist"
+                      aria-orientation="vertical"
+                    >
+                      <button
+                        class="nav-link h-navlinks py-2 my-0 active"
+                        id="v-pills-home-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home"
+                        type="button"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="true"
+                        tabindex="-1"
+                      >
+                        <p
+                          class="nav-link1 mb-0 text-dark text-start px-0 mx-0"
+                        >
+                          <i class="fa fa-chevron-right float-end mt-1"></i>
+                          <span class="text-sm"
+                            ><i class="fa fa-user me-2" aria-hidden="true"></i
+                            >Profile</span
+                          >
+                        </p>
+                      </button>
+                      <button
+                        class="nav-link h-navlinks py-2 my-0"
+                        id="v-pills-profile-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="true"
+                        tabindex="-1"
+                      >
+                        <p
+                          class="nav-link1 text-dark mb-0 text-start px-0 mx-0"
+                        >
+                          <i class="fa fa-chevron-right float-end mt-1"></i>
+                          <span class="text-sm"
+                            ><i class="fa fa-lock me-2" aria-hidden="true"></i
+                            >Update Password</span
+                          >
+                        </p>
+                      </button>
+                      <button
+                        class="nav-link h-navlinks py-2 my-0"
+                        id="v-pills-sales-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#v-sales-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="true"
+                        tabindex="-1"
+                      >
+                        <p
+                          class="nav-link1 text-dark mb-0 text-start px-0 mx-0"
+                        >
+                          <i class="fa fa-chevron-right float-end mt-1"></i>
+                          <span class="text-sm"
+                            ><i
+                            class="fa fa-trophy me-2"
+                              aria-hidden="true"
+                            ></i
+                            >Rewards</span
+                          >
+                        </p>
+                      </button>
+                      <button
+                        class="nav-link h-navlinks py-2 my-0"
+                        id="v-pills-roles-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#v-roles-profile"
+                        type="button"
+                        role="tab"
+                        aria-controls="v-pills-profile"
+                        aria-selected="true"
+                        tabindex="-1"
+                      >
+                        <p
+                          class="nav-link1 text-dark mb-0 text-start px-0 mx-0"
+                        >
+                          <i class="fa fa-chevron-right float-end mt-1"></i>
+                          <span class="text-sm"
+                            ><i
+                              class="fa fa-commenting-o me-2"
+                              aria-hidden="true"
+                            ></i
+                            >Comments</span
+                          >
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-9">
+                    <div class="tab-content">
+                      <div
+                        class="tab-pane fade active show"
+                        id="v-pills-home"
+                        role="tabpanel"
+                      >
+                        <div class="card p-3" id="Divone">
+                          <div class="col-md-12 d-flex justify-content-between">
+                            <div class="col-md-6 d-flex">
+                              <h6>Personal Info</h6>
+                            </div>
+                            <div class="col-md-6 text-end">
+                              <span
+                                class="fa fa-edit text-success"
+                                onclick="switchDocument()"
+                              >
+                              </span>
+                            </div>
+                          </div>
+                          <div class="row" id="showedit">
+                            <div class="col-md-3">
+                              <img
+                                src="./assets/img/team-3.jpg"
+                                class="w-70"
+                                style="border-radius: 10px"
+                              />
+                            </div>
+                            <div
+                              class="col-md-7 d-flex justify-content-between"
+                            >
+                              <div class="col-md-2">
+                                <p>Name:</p>
+                                <p class="font-weight-bold">Brooklyn Alice</p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="font-weight-normal text-dark">
+                                  Email:
+                                </p>
+                                <p class="font-weight-bold text-dark">
+                                  Alice@gmail.com
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3" id="Divtwo" style="display: none">
+                          <div class="row justify-content-start">
+                            <div class="d-flex">
+                              <i
+                                class="fa fa-arrow-left mt-1"
+                                aria-hidden="true"
+                                onclick="switchVisibleBasicInfo()"
+                              ></i>
+                              <h6 class="mx-1">Personal Info</h6>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-3">
+                              <img
+                                src="./assets/img/team-3.jpg"
+                                class="w-70"
+                                style="border-radius: 10px"
+                              />
+                            </div>
+                            <div class="col-md-4">
+                              <label class="form-label">Name:</label>
+                              <div class="input-group input-group-outline mb-1">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  value="Brooklyn Alice"
+                                  name="FullName"
+                                  aria-label="Full Name"
+                                />
+                              </div>
+                            </div>
+
+                            <div class="col-md-4">
+                              <label class="form-label">Email:</label>
+                              <div class="input-group input-group-outline mb-1">
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  name="Email"
+                                  value="Alice@gmail.com"
+                                />
+                              </div>
+                            </div>
+
+                            <div
+                              class="d-flex mt-3"
+                              style="justify-content: end; align-items: center"
+                            >
+                              <div>
+                                <button
+                                  type="button"
+                                  class="btn btn-outline-info py-2 mb-2"
+                                >
+                                  Cancel
+                                </button>
+                                <button
+                                  type="button"
+                                  class="btn btn-sm py-2 text-white mb-2"
+                                  style="background-color: #161d6f"
+                                >
+                                  Save Changes
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="tab-pane fade"
+                        id="v-pills-profile"
+                        role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab"
+                      >
+                        <div class="card p-3">
+                          <div class="row justify-content-start">
+                            <div class="d-flex">
+                              <h6>Update Password</h6>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <form
+                              asp-controller="Settings"
+                              asp-action="ChangePassword"
+                              data-ajax="true"
+                              data-ajax-method="POST"
+                              data-ajax-begin="OnBegin"
+                              data-ajax-success="OnSuccess"
+                              data-ajax-complete="completed2"
+                            >
+                              <div class="col-12 d-flex align-items-center">
+                                <div class="col-3 my-2">
+                                  <p
+                                    class="my-3"
+                                    style="
+                                      margin-top: 1px !important;
+                                      margin-bottom: -21px !important;
+                                    "
+                                  >
+                                    Current password
+                                  </p>
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="input-group input-group-outline">
+                                    <label class="form-label"
+                                      >Current Password</label
+                                    >
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      name="oldpassword"
+                                      aria-label="Password"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-12 d-flex align-items-center">
+                                <div class="col-3">
+                                  <p
+                                    class="my-3"
+                                    style="
+                                      margin-top: 1px !important;
+                                      margin-bottom: -21px !important;
+                                    "
+                                  >
+                                    New Password
+                                  </p>
+                                </div>
+                                <div class="col-md-8">
+                                  <div
+                                    class="input-group input-group-outline my-1"
+                                  >
+                                    <label class="form-label"
+                                      >New Password</label
+                                    >
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      name="newpassword"
+                                      aria-label="Password"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-12 d-flex align-items-center">
+                                <div class="col-3">
+                                  <p
+                                    class=""
+                                    style="
+                                      margin-top: 1px !important;
+                                      margin-bottom: -21px !important;
+                                    "
+                                  >
+                                    Confirm New Password
+                                  </p>
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="input-group input-group-outline">
+                                    <label class="form-label"
+                                      >Confirm New Password</label
+                                    >
+                                    <input
+                                      type="password"
+                                      class="form-control"
+                                      name="confirmnewpassword"
+                                      aria-label="Password"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="d-flex mt-3"
+                                style="
+                                  justify-content: end;
+                                  align-items: center;
+                                "
+                              >
+                                <div>
+                                  <button
+                                    type="button"
+                                    class="btn btn-outline-info py-2 mb-2"
+                                  >
+                                    Cancel
+                                  </button>
+                                  <button
+                                    type="button"
+                                    class="btn btn-sm py-2 text-white mb-2"
+                                    style="background-color: #161d6f"
+                                  >
+                                    Save Changes
+                                  </button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="v-sales-profile"
+                        role="tabpanel"
+                        aria-labelledby="v-sales-profile"
+                      >
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="card">
+                              <!-- Card header -->
+                              <div class="card-header pb-0">
+                                <div class="d-lg-flex">
+                                  <div>
+                                    <h5 class="mb-0">Rewards</h5>
+                                  </div>
+                                  <div class="ms-auto mt-lg-0 mt-4">
+                                    <div class="ms-auto">
+                                      <button
+                                        class="btn btn-primary btn-sm export mb-0 mt-sm-0 mt-1"
+                                        type="button"
+                                        name="button"
+                                        data-bs-toggle="modal" data-bs-target="#addreward"
+                                      >
+                                        Add Reward
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body px-0 pb-0">
+                                <div
+                                  class="row p-2 m-3">
+                                  <div class="table-responsive">
+                                    <table
+                                      class="table table-flush"
+                                      id="datatable-basic"
+                                    >
+                                      <thead class="thead-light">
+                                        <tr>
+                                          <th>Reward</th>
+                                          <th class="text-end">Action</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-sm">T-Shirt</td>
+
+                                          <td class="text-end">
+                                            <img  data-bs-toggle="modal"
+                                            data-bs-target="#Editimport"
+                                              src="./assets/Fanzonley/Action- edit.png"
+                                            />
+                                            <img
+                                              src="./assets/Fanzonley/Delete.png"
+                                            />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="text-sm">Football</td>
+
+                                          <td class="text-end">
+                                            <img  data-bs-toggle="modal"
+                                            data-bs-target="#Editimport"
+                                              src="./assets/Fanzonley/Action- edit.png"
+                                            />
+                                            <img
+                                              src="./assets/Fanzonley/Delete.png"
+                                            />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td class="text-sm">100$</td>
+
+                                          <td class="text-end">
+                                            <img  data-bs-toggle="modal"
+                                            data-bs-target="#Editimport"
+                                              src="./assets/Fanzonley/Action- edit.png"
+                                            />
+                                            <img
+                                              src="./assets/Fanzonley/Delete.png"
+                                            />
+                                          </td>
+                                        </tr>
+                                     
+                                       
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="tab-pane fade"
+                        id="v-roles-profile"
+                        role="tabpanel"
+                        aria-labelledby="v-roles-profile"
+                      >
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="card">
+                            <!-- Card header -->
+                            <div class="card-header pb-0">
+                              <div class="d-lg-flex">
+                                <div>
+                                  <h5 class="mb-0">Comments</h5>
+                                </div>
+                                <div class="ms-auto mt-lg-0 mt-4">
+                                  <div class="ms-auto">
+                                    <button
+                                      class="btn btn-primary btn-sm export mb-0 mt-sm-0 mt-1"
+                                      type="button"
+                                      name="button"
+                                      data-bs-toggle="modal" data-bs-target="#addcomment"
+                                    
+                                    >
+                                    Add Comment
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card-body px-0 pb-0">
+                              <div
+                                class="row p-2 m-3">
+                                <div class="table-responsive">
+                                  <table
+                                    class="table table-flush"
+                                    id="datatable-basic"
+                                  >
+                                    <thead class="thead-light">
+                                      <tr>
+                                        <th>Comment</th>
+                                        <th class="text-end">Action</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-sm text-justify">Congratulations! You've won our football prediction event! Please stay behind the stage after the game for your reward</td>
+
+                                        <td class="text-end">
+                                          <img  
+                                            src="./assets/Fanzonley/Action- edit.png"
+                                          />
+                                          <img
+                                            src="./assets/Fanzonley/Delete.png"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-sm text-justify">Congratulations! You've won our football prediction event! Please stay behind the stage after the game for your reward</td>
+
+                                        <td class="text-end">
+                                          <img  
+                                            src="./assets/Fanzonley/Action- edit.png"
+                                          />
+                                          <img
+                                            src="./assets/Fanzonley/Delete.png"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-sm text-justify">Congratulations! You've won our football prediction event! Please stay behind the stage after the game for your reward</td>
+
+                                        <td class="text-end">
+                                          <img  
+                                            src="./assets/Fanzonley/Action- edit.png"
+                                          />
+                                          <img
+                                            src="./assets/Fanzonley/Delete.png"
+                                          />
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td class="text-sm text-justify">Congratulations! You've won our football prediction event! Please stay behind the stage after the game for your reward</td>
+
+                                        <td class="text-end">
+                                          <img  
+                                            src="./assets/Fanzonley/Action- edit.png"
+                                          />
+                                          <img
+                                            src="./assets/Fanzonley/Delete.png"
+                                          />
+                                        </td>
+                                      </tr>
+                                   
+                                     
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="import" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog mt-lg-6 modal-ls modal-center">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel">Add Reward</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-label font-weight-bold">Reward</label>
+                    <div class="input-group input-group-outline bg-white">
+                      <input
+                        type="text"
+                        class="form-control w-100"
+                        aria-describedby="emailHelp"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                        placeholder="Lorem ipsum"
+                      />
+                    </div>
+                  </div>
+
+                 
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-primary btn-sm mb-0 mt-sm-0 mt-1">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- edit reward -->
+      
+
+        <div class="modal fade" id="addreward" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sl" role="document">
+            <div class="modal-content p-3">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Reward</h5>
+                <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+             
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-label font-weight-bold">Reward</label>
+                    <div class="input-group input-group-outline bg-white">
+                      <input
+                        type="text"
+                        class="form-control w-100"
+                        aria-describedby="emailHelp"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                        placeholder="Lorem ipsum is a dummy text"
+                      />
+                    </div>
+                  </div>
+
+                 
+                </div>
+        
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-sm mb-0 mt-sm-0 mt-1">
+            Save
+            </button>
+          </div>
+          </div>
+        </div>
+        </div>
+        <!-- add comment -->
+        <div class="modal fade" id="addcomment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-sl" role="document">
+            <div class="modal-content p-3">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Comment</h5>
+                <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+             
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12">
+                    <label class="form-label font-weight-bold">Comment</label>
+                    <div class="input-group input-group-outline bg-white">
+                      <input
+                        type="text"
+                        class="form-control w-100"
+                        aria-describedby="emailHelp"
+                        onfocus="focused(this)"
+                        onfocusout="defocused(this)"
+                        placeholder="Lorem ipsum is a dummy text"
+                      />
+                    </div>
+                  </div>
+
+                 
+                </div>
+        
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-sm mb-0 mt-sm-0 mt-1">
+              Add
+            </button>
+          </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <!-- Kanban scripts -->
+    <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+    <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+    <script src="./assets/js/plugins/chartjs.min.js"></script>
+    <script src="./assets/js/plugins/world.js"></script>
+    <script src="./assets/js/plugins/datatables.js"></script>
+    <script src="./assets/js/plugins/choices.min.js"></script>
+    <script>
+      if (document.getElementById("choices-type")) {
+        var element = document.getElementById("choices-type");
+        const example = new Choices(element, {
+          searchEnabled: false,
+        });
+      }
+      function switchRoleDocument() {
+        if (document.getElementById("Divthree")) {
+          if (document.getElementById("Divthree").style.display == "none") {
+            document.getElementById("Divthree").style.display = "block";
+            document.getElementById("Divfour").style.display = "none";
+          } else {
+            document.getElementById("Divthree").style.display = "none";
+            document.getElementById("Divfour").style.display = "block";
+          }
+        }
+      }
+      function switchDocument() {
+        if (document.getElementById("Divone")) {
+          if (document.getElementById("Divone").style.display == "none") {
+            document.getElementById("Divone").style.display = "block";
+            document.getElementById("Divtwo").style.display = "none";
+          } else {
+            document.getElementById("Divone").style.display = "none";
+            document.getElementById("Divtwo").style.display = "block";
+          }
+        }
+      }
+
+      function switchVisibleBasicInfo() {
+        if (document.getElementById("Divtwo")) {
+          if (document.getElementById("Divtwo").style.display == "none") {
+            document.getElementById("Divtwo").style.display = "block";
+            document.getElementById("Divone").style.display = "none";
+          } else {
+            document.getElementById("Divtwo").style.display = "none";
+            document.getElementById("Divone").style.display = "block";
+          }
+        }
+      }
+      function switchRoleDocumentBack() {
+        if (document.getElementById("Divfour")) {
+          if (document.getElementById("Divfour").style.display == "none") {
+            document.getElementById("Divfour").style.display = "block";
+            document.getElementById("Divthree").style.display = "none";
+          } else {
+            document.getElementById("Divfour").style.display = "none";
+            document.getElementById("Divthree").style.display = "block";
+          }
+        }
+      }
+      const dataTableBasic = new simpleDatatables.DataTable(
+        "#datatable-basic",
+        {
+          searchable: true,
+          fixedHeight: true,
+        }
+      );
+
+      const dataTableSearch = new simpleDatatables.DataTable(
+        "#datatable-search",
+        {
+          searchable: true,
+          fixedHeight: true,
+        }
+      );
+    </script>
+    <script>
+      var win = navigator.platform.indexOf("Win") > -1;
+      if (win && document.querySelector("#sidenav-scrollbar")) {
+        var options = {
+          damping: "0.5",
+        };
+        Scrollbar.init(document.querySelector("#sidenav-scrollbar"), options);
+      }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/material-dashboard.min.js?v=3.0.5"></script>
+  </body>
+</html>

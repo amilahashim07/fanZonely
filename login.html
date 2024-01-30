@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link
+    rel="apple-touch-icon"
+    sizes="76x76"
+    href="../../assets/img/apple-icon.png"
+  />
+  <link rel="icon" type="image/png" href="./assets/Fanzonley/Fav Icon.png" />
+  <title>FanZonely</title>
+  <!--     Fonts and icons     -->
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"
+  />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script
+    src="https://kit.fontawesome.com/42d5adcbca.js"
+    crossorigin="anonymous"
+  ></script>
+  <!-- Material Icons -->
+  <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+    rel="stylesheet"
+  />
+  <!-- CSS Files -->
+  <link
+    id="pagestyle"
+    href="./assets/css/material-dashboard.css?v=3.0.5"
+    rel="stylesheet"
+  />
+</head>
+
+<body class="g-sidenav-show  " style="background-color: #FFFFFF;">
+    <div class="container ">
+        <div class="row">
+            <div class="col-12">
+                <!-- Navbar -->
+                <div class="container-fluid ps-2 pe-0 mt-3">
+                 <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " href="#">
+                        <img src="./assets/Fanzonley/Logo.png" class="w-20" />
+                    </a>
+                </div>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+    <main class="main-content  mt-0">
+      
+            <div class="page-header min-vh-85">
+                <div class="container">
+                    
+                        <div class="col-6 d-lg-flex d-none h-100  pe-0 position-absolute top-0 start-0 text-center justify-content-center ">
+                            <div class="position-relative   m-3 px-7 border-radius-lg d-flex flex-column justify-content-center" >
+                                <img src="./assets/Fanzonley/Illustration.png" class="h-80 w-80" />
+
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-7  ms-auto me-auto ms-lg-auto me-lg-5">
+                            <div class="card ">
+                                <div class="card-header pb-0">
+                                    <h4 class="font-weight-bolder text-center">Sign in</h4>
+                                
+                                </div>
+                                <div class="card-body pt-2">
+                                    <!-- <form role="form" method="post" action="@Url.Action("Login","Home")"> -->
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-outline mb-3">
+                                                    <label class="form-label">Email</label>
+                                                    <input type="text" name="email" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="input-group input-group-outline mb-3">
+                                                    <label class="form-label">Password</label>
+                                                    <input type="password" class="form-control">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="text-end">
+                                            <label>
+                                                <a href="forgotpassword.html" class="text-info font-weight-bolder"><u>Forgot password</u></a>
+                                            </label>
+                                        </div>
+                                        <div class="text-center">
+                                           <a href="index.html"><button" class="btn  btn btn-primary btn-sm w-100 mt-4 mb-0">Login</button></a> 
+                                        </div>
+                                    <!-- </form> -->
+                                </div>
+
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+       
+    </main>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- Kanban scripts -->
+  <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+  <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <script src="./assets/js/plugins/world.js"></script>
+  <script src="./assets/js/plugins/datatables.js"></script>
+  <script>
+      // Function to open a specific tab content
+  function openCity(evt, cityName) {
+    // your existing code to switch tabs
+  }
+
+  // Function to set the default active tab
+  window.onload = function () {
+    // Get the element with id "defaultOpen" (the first tab button)
+    var defaultTabButton = document.getElementById("defaultOpen");
+    
+    // Trigger a click event on the default tab button
+    defaultTabButton.click();
+  };
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <script>
+    if (document.getElementById('datatable-basic')) {
+      const dataTableSearch = new simpleDatatables.DataTable("#datatable-basic", {
+        searchable: true,
+        fixedHeight: false,
+        perPage: 7
+      });
+
+      document.querySelectorAll(".export").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          var type = el.dataset.type;
+
+          var data = {
+            type: type,
+            filename: "material-" + type,
+          };
+
+          if (type === "csv") {
+            data.columnDelimiter = "|";
+          }
+
+          dataTableSearch.export(data);
+        });
+      });
+    };
+  </script>
+    <script>
+      if (document.getElementById('datatable-basic-door')) {
+        const dataTableSearch = new simpleDatatables.DataTable("#datatable-basic-door", {
+          searchable: true,
+          fixedHeight: false,
+          perPage: 7
+        });
+  
+        document.querySelectorAll(".export").forEach(function (el) {
+          el.addEventListener("click", function (e) {
+            var type = el.dataset.type;
+  
+            var data = {
+              type: type,
+              filename: "material-" + type,
+            };
+  
+            if (type === "csv") {
+              data.columnDelimiter = "|";
+            }
+  
+            dataTableSearch.export(data);
+          });
+        });
+      };
+    </script>
+      <script>
+        if (document.getElementById('datatable-basic-accessories')) {
+          const dataTableSearch = new simpleDatatables.DataTable("#datatable-basic-accessories", {
+            searchable: true,
+            fixedHeight: false,
+            perPage: 7
+          });
+    
+          document.querySelectorAll(".export").forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              var type = el.dataset.type;
+    
+              var data = {
+                type: type,
+                filename: "material-" + type,
+              };
+    
+              if (type === "csv") {
+                data.columnDelimiter = "|";
+              }
+    
+              dataTableSearch.export(data);
+            });
+          });
+        };
+      </script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.min.js?v=3.0.5"></script>
+</body>
+
+</html>
